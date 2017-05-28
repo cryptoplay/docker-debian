@@ -1,0 +1,11 @@
+#!/bin/bash
+
+. ci/vars
+docker login -u ${user} -p ${pass}
+#docker login -u $DOCKER_USER -p $DOCKER_PASS
+docker tag cryptoplay/debian cryptoplay/debian:${TAG}
+docker push cryptoplay/debian:${TAG}
+docker push cryptoplay/debian:latest
+docker logout
+
+#curl -X POST 'https://hooks.microbadger.com/images/cryptoplay/debian/RX3qWmAPgcpnPlHicohwrXxh3po='

@@ -1,7 +1,6 @@
-debian#
 # An debian Xenial Xerus container with helper scripts for installing packages
 #
-# todo: this is pretty much identical to bwstitt/library-debian
+# todo: this is pretty much identical to cryptoplay/library-debian
 #
 FROM debian:8.8
 
